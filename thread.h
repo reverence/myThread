@@ -15,7 +15,7 @@
 /**************默认支持的最大任务数****************/
 #define MAX_TASKS 16
 /**************默认时间片大小****************/
-#define DEFAULT_TIME_SLICE 5
+#define DEFAULT_TIME_SLICE 1
 
 /*******************线程状态*********************/
 #define INITIALIZED 0
