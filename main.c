@@ -77,9 +77,32 @@ int fun4(){
 	printf("%s\tfun4 exit\n",get_time());
 }
 
-int main(){
-	init_timer();//初始化定时器
+/**
+ * 测试一直循环
+ */
+int fun5()
+{
+	int i = 5;
+	int j,k;
+	while(i--)
+	{
+		printf("%s\tfun5 is running at %d\n",get_time(),i);
+		for(j=0;j<10000;j++)
+		{
+			for(k=0;k<10000;k++)
+			{
 
+			}
+		}
+		printf("%s\tfun5 is end at %d\n",get_time(),i);
+	}
+	printf("%s\tfun5 exit\n",get_time());
+}
+
+int main(){
+
+	init_timer();
+	printf("begin main\n");
 	int tid1,tid2,tid3,tid4;
 	thread_create(&tid1,fun1);
 	printf("create thread %d for exec fun1\n",tid1);
@@ -90,10 +113,15 @@ int main(){
 	thread_create(&tid4,fun4);
 	printf("create thread %d for exec fun4\n",tid4);
 
+	int tid5;
+	thread_create(&tid5,fun5);
+	printf("create thread %d for exec fun5\n",tid5);
+
 	join(tid1);//等待线程1执行完
 	join(tid2);//等待线程2执行完
 	join(tid3);//等待线程3执行完
 	join(tid4);//等待线程4执行完
+	join(tid5);//等待线程5执行完
 
 	printf("main exited\n");
 
