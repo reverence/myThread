@@ -28,7 +28,7 @@ BEGIN:
 	INT 21H
 	STI
 	
-    MOV   AX, 0619H     ;清屏－－用AL=0竟然会荡机
+    MOV   AX, 0619H     ;清屏
     MOV   BX, 0E00H
     MOV   CX, 0000H
     MOV   DX, 184FH
