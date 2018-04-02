@@ -3,6 +3,7 @@
 context_switch:
 //默认支持AT&T
 .intel_syntax noprefix
+	//call cli
 	push ebp
 	mov ebp,esp
 
@@ -37,7 +38,7 @@ context_switch:
 	pop eax
 
 	pop ebp
-
+	call sti
 	ret
 
 
