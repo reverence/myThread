@@ -11,7 +11,7 @@
 /**
  * 考虑到创建线程时，主线程正在运行，主线程切换时也要保存栈信息，所以tasks中应该初始化放一个主线程对象占个坑
  */
-my_task main_task = {0,NULL,0,{0},RUNNING,0};
+my_task main_task = {0,NULL,0,{0},RUNNING,0,5};
 
 my_task* current_task = &main_task;
 
